@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapShop</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url(./images/bg.jpg);
+        }
+        
+        .container {
+          background-color: #fff;
+          padding: 15px;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      }
+
+        table {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            border: none;
+        }
+        table td {
+            padding: 8px;
+        }
+        table td:first-child {
+            width: 30%;
+            /* font-weight: bold; */
+            font-style: italic;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+        }
+        select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+        textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+        }
+        .submit-btn {
+            width: 40%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 40px;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-grp {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+</head>
+<body>
+      <div class="container">
+        <form action='/updateAccount' method="post" enctype="multipart/form-data">
+          <table>
+              <tbody>
+                  <tr>
+                      <td>Username:</td>
+                      <td><input type="text" name="username" id="username" value=<%=username%> readonly></td>
+                  </tr>
+                  <tr>
+                    <td>Old Password:</td>
+                    <td><input type="password" name="oldpassword" id="oldpassword" required></td>
+                </tr>
+                <tr>
+                    <td>New Password:</td>
+                    <td><input type="password" name="password" id="password" required></td>
+                </tr>
+                  <tr>
+                      <td>Confirm Password:</td>
+                      <td><input type="password" name="passwordhash" id="passwordhash" required></td>
+                  </tr>
+                  <tr>
+                      <td>Gender:</td>
+                      <td>
+                          <select name="gender" id="gender">
+                              <option value="M">Male</option>
+                              <option value="F">Female</option>
+                              <option value="O">Other</option>
+                          </select>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>Email:</td>
+                      <td><input type="email" name="email" id="email" required></td>
+                  </tr>
+                  <tr>
+                      <td>Mobile:</td>
+                      <td><input type="tel" name="mobile" id="mobile" required></td>
+                  </tr>
+                  <tr>
+                      <td>Picture:</td>
+                      <td><input type="file" name="pic" id="pic" ></td>
+                  </tr>
+                  <tr>
+                      <td>Profile Text:</td>
+                      <td><textarea name="profiletext" id="profiletext" rows="4"></textarea></td>
+                  </tr>
+                  <tr>
+                      <td colspan="2">
+                        <div class="btn-grp">
+                            <button type="submit" class="submit-btn">Update Account</button>
+                        </div>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </form>
+  
+      </div>
+
+</body>
+</html>

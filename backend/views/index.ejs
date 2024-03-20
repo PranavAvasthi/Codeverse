@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SnapShop</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f0f2f5;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          overflow: hidden;
+          /* background-color: rgb(15, 70, 152); */
+          background-image: linear-gradient(to top, rgb(9, 76, 156), rgb(10, 80, 162));
+          /* rgb(13, 66, 148) */
+          /* background-image: url(./images/bg.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: 0px; */
+      }
+
+      #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: auto;
+            height: 100vh;
+            padding-left: 470px;
+            /* z-index: -1; */
+        }
+
+        #image-logo img{
+          border-radius: 50%;
+          width: 75px;
+          height: 75px;
+        }
+
+      .container {
+          text-align: center;
+          background-color: #fff;
+          padding: 35px;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          position: relative;
+          z-index: 1;
+      }
+
+      .bxl-twitter {
+        font-size: 45px;
+        color: rgb(29, 161, 242);
+      }
+
+      h1 {
+        font-weight: bold;
+          color: black;
+          font-size: 1.5rem;
+          font-style: italic;
+      }
+      form {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+      
+      .input-box {
+        position: relative;
+      }
+
+      .input-box i {
+        font-size: 15px;
+        position: absolute;
+        right: 10px;
+        top: 40%;
+        transform: translateY(-50%);
+      }
+
+      input[type="text"],
+      input[type="password"] {
+          width: 300px;
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 40px;
+          box-sizing: border-box;
+
+      }
+      .button-group {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          padding-bottom: 15px;
+          width: 300px;
+          padding-top: 10px;
+      }
+      button {
+          width: 48%;
+          padding: 10px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+      }
+      .login-btn {
+          background-color: #7acbfd;
+          color: #fff;
+      }
+      
+      .login-btn:hover {
+        background-color: #049cfa;
+      }
+
+      #create-account {
+        font-size:15px;
+      }
+  </style>
+  </head>
+
+  <body>
+    <video id="video-background" autoplay muted loop>
+      <source src="./images/vid1.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <!-- <i class='bx bxl-twitter' ></i> -->
+        <div id="image-logo">
+          <img src="./images/logo.png" alt="Logo">
+        </div>
+      <h1>SIGN IN TO SNAPSHOP</h1>
+      <form action="/home" method="post">
+          <div class="input-box">
+            <input type="text" name="username" placeholder="Username" required>
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="input-box">
+            <input type="password" name="password" placeholder="Password" required>
+            <i class="fa-solid fa-lock"></i>
+          </div>
+          <div class="button-group">
+              <button type="submit" class="login-btn">Login</button>
+          </div>
+          <div id="create-account">
+            Don't have an account? <span><a href="/createAccount" >Create Account</a></span>
+          </div>
+      </form>
+  </div>
+
+  <script src="https://kit.fontawesome.com/faa4834db5.js" crossorigin="anonymous"></script>
+
+  </body>
+</html>

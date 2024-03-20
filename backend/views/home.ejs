@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapShop</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url(./images/bg.jpg);
+            background-size: cover;
+            background-position: 0px;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            text-align: center;
+            background-color: lightgray;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .bxl-twitter {
+            font-size: 45px;
+            color: rgb(29, 161, 242);
+        }
+
+        h3 {
+            font-size: 25px;
+            font-style: italic;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 5px;
+        }
+
+        .welcome-text {
+            padding-top: 20px;
+            font-size: 25px;
+            margin-bottom: 10px;
+            font-style: italic;
+            font-weight: bold;
+        }
+        
+        h3 {
+            font-size: 20px;
+        }
+
+        input[type="text"],
+        input[type="file"] {
+            border-radius: 8px;
+            width: calc(100% - 20px);
+            padding: 7px;
+            margin: 5px auto;
+            display: block;
+        }
+
+        .cen {
+            max-width: 100%;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        textarea {
+            width: 96%;
+            border-radius: 8px;
+        }
+
+        table {
+            border-collapse: collapse;
+            border: none;
+        }
+
+        table td input {
+            border: none;
+        }
+
+        table td textarea {
+            border: none;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 7px;
+            cursor: pointer;
+            border: none;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-grp {
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="welcome-text">Welcome <%= username %> to SnapShop</div>
+        <img src="<%= pic %>" alt="User Image">
+        <div>
+            <h3>Enter Your Product Details here</h3>
+            <form action="/create-product" method="post" enctype="multipart/form-data">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="cen"><input type="text" name="prodT" id="" placeholder="Product Title">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="cen"><textarea name="prodD" id="" rows="8" placeholder="Product Description"></textarea></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="cen">Upload Your Product Picture<input type="file" name="pic" id="pic"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div style="padding-top: 8px;">
+                                    <input type="submit" value="Submit">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        <div class="btn-grp">
+            <a href="/updateAccount">
+                <input class="sub" type="submit" value="Update Account">
+            </a>
+
+            <a href="/logout">
+                <input class="sub" type="submit" value="Logout">
+            </a>
+        </div>
+        <div id="processedImageContainer"></div>
+    </div>
+
+    <script>
+        let process =  document.getElementById('processedImageContainer');
+        
+    </script>
+    
+</body>
+
+</html>
+
+
+
+
